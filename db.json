@@ -1,0 +1,16 @@
+{
+    "books": [
+        {
+            "id": 1,
+            "name": "Harry Potter",
+            "author": "J.K. Rowling",
+            "year": 1997
+        },
+        {
+            "id": 2,
+            "name": "The Lord of the Rings",
+            "author": "J.R.R. Tolkien",
+            "year": 1954
+        }
+    ]
+}
