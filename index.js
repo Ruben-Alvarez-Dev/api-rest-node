@@ -66,6 +66,15 @@ app.put("/books/:id", (req, res) => {
     res.json({ message: "Book updated successfully" });
 })
 
+app.delete('/books/:id', (req, res) => {
+    const data = readData();
+    const id = parseInt(req.params.id);
+    const bookIndex = data.books.findIndex((book) => book.id === id);
+    data.books.splice(bookIndex, 1);
+    writeData(data);
+    res.json({ message: 'Book deleted successfully' });
+});
+
 
 app.listen(3000, () => {
     console.log('Server is running on port 3000');

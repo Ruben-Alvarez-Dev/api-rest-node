@@ -21,3 +21,7 @@ Content-Type: application/json
 {
   "year": 2024
 }
+
+###
+DELETE http://localhost:3000/books/3 HTTP/1.1
+
