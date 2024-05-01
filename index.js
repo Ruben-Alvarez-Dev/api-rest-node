@@ -29,7 +29,14 @@ app.get("/", (req, res) => {
 
 app.get('/books', (req, res) => {
     const data = readData();
-    res.send(data);
+    res.send(data.books);
+});
+
+app.get('/books/:id', (req, res) => {
+    const data = readData();
+    const id = parseInt(req.params.id);
+    const book = data.books.find(book => book.id === id);
+    res.json(book);
 });
 
 app.listen(3000, () => {
